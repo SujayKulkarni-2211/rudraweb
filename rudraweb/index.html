@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUDRA - Resourceful Unit for Data Research and Analytics</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="rudrastyle.css">
+    
+</head>
+
+<body style="background-color: #010102;">
+
+    <!-- Interactive Door Animation -->
+    <div class="door-container">
+        <img src="rudralogo9.jpeg" alt="RUDRA Logo" class="logo" style="width: 250px;">
+        <button class="btn-enter" onclick="openDoor()">Enter the world of RUDRA</button>
+        <div class="graphs-container">
+            <div class="graph"></div>
+            <div class="graph"></div>
+            <div class="graph"></div>
+        </div>
+        <div class="door"></div>
+    </div>
+
+    <!-- Hidden Jumbotron / Hero Section -->
+    <div id="home" class="homepage" style="z-index: 1000;">
+        <div class="container-fluid">
+            <div class="title ">
+                <div class="container-fluid d-flex justify-content-between">
+                    <a class="navbar-brand d-flex align-items-center" href="#">
+                        <img src="rudralogo9.jpeg" alt="RUDRA Logo" class="logo" style="border-radius: 50%;">
+                        <span class="d-none d-lg-block text-center">
+                            <h1 class="h1" style="color: #fff;">Resourceful Unit for Data Research and Analytics</h1>
+                        </span>
+                    </a>
+                    <a href="https://rvu.edu.in/" target="_blank">
+                        <div class="powered-by">
+                            Powered by <img src="rvulogowhite.png" alt="RV University Logo">
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="aboutus.html">About</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Initiatives
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="comingsoon.html">Major Events</a>
+                                    <hr>
+                                    <a class="dropdown-item" href="comingsoon.html">Major Events</a>
+                                    <a class="dropdown-item" href="comingsoon.html">Other Events</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="comingsoon.html">Blogs and News</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="comingsoon.html">Team</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="comingsoon.html">Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="comingsoon.html">Join Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="comingsoon.html">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="video-container">
+                <video autoplay muted loop id="video-background" style="opacity: 0.5;">
+                    <source src="The Data Revolution_ Illuminating Insights Ahead.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+                <div class="text-overlay">
+                    <br><br>
+                    <h1>RUDRA - Resourceful Unit for Data Research and Analytics</h1>
+                    <p>Empowering Students with Data Skills</p>
+                    <a href="#" class="btn btn-primary">Join Us Today</a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="counter-wrapper">
+                    <div class="counter-title">Members</div>
+                    <div class="counter" id="membersCounter" data-target="100">0</div>
+                </div>
+                <div class="counter-wrapper">
+                    <div class="counter-title">Views on YouTube</div>
+                    <div class="counter" id="viewsCounter" data-target="1000">0</div>
+                </div>
+                <div class="counter-wrapper">
+                    <div class="counter-title">Watch Time (hrs)</div>
+                    <div class="counter" id="watchtimeCounter" data-target="8">0</div>
+                </div>
+                <div class="counter-wrapper">
+                    <div class="counter-title">Exclusive Members</div>
+                    <div class="counter" id="membersExclusiveCounter" data-target="80">0</div>
+                </div>
+            </div>
+            <div class="container-fluid animated-gradient fade-in" id="about-us"
+                style="padding: 5px; margin-top: 30px;">
+                <div class="title backgrey" style="margin-top: 10px; padding: 10px;">
+                    <h1>About Us</h1>
+                </div>
+                <div class="about-us-content backgrey" style="margin: 10px 5px; padding: 10px; font-size: large;">
+                    <p>Welcome to RUDRA - Resourceful Unit for Data Research and Analytics, a dynamic college club
+                        dedicated to empowering students with data skills and fostering a community passionate about
+                        data research and analytics.</p>
+                    <p>At RUDRA, we align with RV University's mission to prepare students for the VUCA (Volatility,
+                        Uncertainty, Complexity, and Ambiguity) world by focusing on problem-solving, critical thinking,
+                        innovation, creativity, communication, entrepreneurship, and data science.</p>
+                    <p>As RV University's programmes offer an opportunity for students to work closely with industries,
+                        government policymakers, researchers, think tanks, and global organizations, with a focus on
+                        imparting 21st-century skills through experiential, holistic learning, we offer our small but
+                        significant support in adopting a model of pedagogy to build impressive portfolios and
+                        emphasizes interdisciplinary studies, internships, and student exchange programs.</p>
+                    <p>RUDRA, as a society, aims to promote knowledge of Data Analytics and Data Science among RVU
+                        students, ensuring they become proficient Data Scientists. Our initiatives include excellence in
+                        Data Research and Analytics, knowledge sharing, collaboration, skill development, community
+                        building, innovation, technological advancement, and research on new advancements and industry
+                        requirements.</p>
+                </div>
+            </div>
+            <div class="container" id="events" style="margin-top: 30px;">
+                <div class="containerfluid backgrey title" style="margin-top: 10px; padding: 10px;"><strong>Events:-
+                    </strong></div><br>
+                <div class="container">
+                    <div class="event-typewriter d-inline-flex">
+
+                        <h2 class="event-title d-inline-flex"></h2>
+                        
+                    </div><br><br>
+                    <a href="#" class="btn btn-primary justify-content-center align-items-center text-center">Explore Events</a> 
+                    
+
+                </div>
+            </div>
+            <div class="testimonials-container" style="margin-top: 30px;">
+                <div class="title backgrey" style="font-size: larger; margin-top: 10px; padding: 10px;">Voices and
+                    Impressions</div>
+                <div class="testimonials-slider">
+                    <div class="testimonial">
+                        <img src="rudralogo9.jpeg" alt="RUDRA Logo">
+                        <h3>Aryan Shaiju</h3>
+                        <p>"RUDRA has been instrumental in shaping my data analytics skills. Their workshops and events
+                            have provided valuable insights."</p>
+                    </div>
+                    <div class="testimonial">
+                        <img src="rudralogo9.jpeg" alt="RUDRA Logo">
+                        <h3>Benedict Antony</h3>
+                        <p>"RUDRA is an amazing club that provides excellent opportunities for students to learn and
+                            grow in the field of data analytics."</p>
+                    </div>
+                    <!-- Add more testimonials as needed -->
+                </div>
+                <div class="prev" onclick="moveSlider(-1)">&#10094;</div>
+                <div class="next" onclick="moveSlider(1)">&#10095;</div>
+            </div>
+
+            
+            <div class="partnerships"><div class="marquee-container">
+                
+                <div class="title backgrey" style="font-size: larger; margin-top: 10px; padding: 10px;">Partnerships and Projects</div>
+                <div class="marquee-content">
+                    <div class="card">
+                        <img src="rudralogo9.jpeg" alt="Company Logo">
+                        <div class="card-info">
+                            <h3>Sri Aranea </h3>
+                            <h6>Web Development Company</h6>
+                            <h6>Web Development and Analytics</h6>
+                        </div>
+                        
+                    </div>
+                    <div class="card">
+                        <img src="rudralogo9.jpeg" alt="Company Logo">
+                        <div class="card-info">
+                            <h3>Harshitha <br>Technologies</h3>
+                            <h6>Electronics Company</h6>
+                            <h6>Data Analysis of Expenses</h6>
+                        </div>
+                        
+                    </div>
+                    <div class="card">
+                        <img src="rudralogo9.jpeg" alt="Company Logo">
+                        <div class="card-info">
+                            <h3>Precison Forge <br> Technologies</h3>
+                            <h6>3D Printing Company</h6>
+                            <h6>Data Analysis</h6>
+                        </div>
+                        
+                    </div>
+                    <!-- Add more member cards here -->
+                    <div class="card">
+                        <img src="rudralogo9.jpeg" alt="Company Logo">
+                        <div class="card-info">
+                            <h3>Complany/Club name</h3>
+                            <h6>Company Purpose</h6>
+                            <h6>Company Purpose</h6>
+                        </div>
+                        
+                    </div>
+                    <div class="card">
+                        <img src="rudralogo9.jpeg" alt="Company Logo">
+                        <div class="card-info">
+                            <h3>Company Name</h3>
+                            <h6>Company Purpose</h6>
+                            <h6>Company Purpose</h6>
+                        </div>
+                        
+                    </div>
+                    
+                    <!-- Add more member cards here -->
+                </div>
+           
+            </div></div>
+            
+
+            <div class="blogs-news">
+                <div class="container">
+                    <h2 class="section-title backgrey" style="font-size: larger; margin-top: 10px; padding: 10px;">Blogs
+                        and News</h2>
+                    <div class="row">
+                        <!-- First Blog/News Card -->
+                        <div class="col-md-4">
+                            <div class="blog-card">
+
+                                <div class="blog-info">
+                                    <h3>Blog Title 1</h3>
+                                    <p>Description of the blog post goes here.</p>
+                                    <a href="#" class="btn btn-primary">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Second Blog/News Card -->
+                        <div class="col-md-4">
+                            <div class="blog-card">
+
+                                <div class="blog-info">
+                                    <h3>Blog Title 2</h3>
+                                    <p>Description of the blog post goes here.</p>
+                                    <a href="#" class="btn btn-primary">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Third Blog/News Card -->
+                        <div class="col-md-4">
+                            <div class="blog-card">
+
+                                <div class="blog-info">
+                                    <h3>Other Blogs</h3>
+                                    <p>Enrich yourself by discovering the collection</p>
+                                    <a href="#" class="btn btn-primary">Read More></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="team-carousel" class="carousel slide" data-ride="carousel" style="margin-bottom: 20px;">
+                <div class="title backgrey" style="font-size: larger; margin-top: 10px; padding: 10px;">The Team</div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="member-card">
+                                    <img src="rudralogo9.jpeg" alt="RUDRA Logo">
+                                    <div class="member-info">
+                                        <h3>President</h3>
+                                        <h4>Sujay V Kulkarni</h4>
+                                    </div>
+                                    <div class="social-icons">
+                                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                        <a href="#"><i class="far fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="member-card">
+                                    <img src="rudralogo9.jpeg" alt="RUDRA Logo">
+                                    <div class="member-info">
+                                        <h3>Vice President</h3>
+                                        <h4>Aditya S Maller</h4>
+                                    </div>
+                                    <div class="social-icons">
+                                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                        <a href="#"><i class="far fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="member-card">
+                                    <img src="rudralogo9.jpeg" alt="RUDRA Logo">
+                                    <div class="member-info">
+                                        <h3>Secretary</h3>
+                                        <h4>Vaishnav S</h4>
+                                    </div>
+                                    <div class="social-icons">
+                                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                        <a href="#"><i class="far fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="member-card">
+                                    <img src="rudralogo9.jpeg" alt="RUDRA Logo">
+                                    <div class="member-info">
+                                        <h3>Recruitment Head</h3>
+                                        <h4>Anirudh</h4>
+                                    </div>
+                                    <div class="social-icons">
+                                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                        <a href="#"><i class="far fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="member-card">
+                                    <img src="rudralogo9.jpeg" alt="RUDRA Logo">
+                                    <div class="member-info">
+                                        <h3>Treasurer</h3>
+                                        <h4>Apoorv Gadiya</h4>
+                                    </div>
+                                    <div class="social-icons">
+                                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                        <a href="#"><i class="far fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="member-card">
+                                    <img src="rudralogo9.jpeg" alt="RUDRA Logo">
+                                    <div class="member-info">
+                                        <h3>Public Relations Manager</h3>
+                                        <h4>Misha N Devegowda</h4>
+                                    </div>
+                                    <div class="social-icons">
+                                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                        <a href="#"><i class="far fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more carousel items with three cards each as needed -->
+                </div>
+                <a class="carousel-control-prev" href="#team-carousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#team-carousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+                <div class="know-more-btn">
+                    <button class="btn btn-primary">Know More</button>
+                </div>
+            </div>
+            
+            <footer class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h5>Quick Links</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="comingsoon.html">Blogs</a></li>
+                                <li><a href="comingsoon.html">Join Us</a></li>
+                                <li><a href="comingsoon.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>Follow Us</h5>
+                            <ul class="social-icons">
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fab fa-github"></i></a></li>
+                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                <!-- Add more social media icons as needed -->
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>Contact</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="mailto:info@example.com"><i class="far fa-envelope"></i> Email</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="comingsoon.html" class="go-to-top"><i class="fas fa-chevron-up"></i> Go to Top</a>
+                        </div>
+                    </div>
+                </div>
+                <hr style="height: 2px; color: #010102; background-color: #010102;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 text-center text-md-left">
+                            <a href="comingsoon.html" class="footer-last-links">Privacy Policy</a> &nbsp; &nbsp;
+                            <a href="comingsoon.html" class="footer-last-links">Copyright Policy</a>
+                        </div>
+                        <div class="col-sm-12 col-md-6 text-center text-md-right">
+                            <a href="https://sujaykulkarni-2211.github.io/sujayvkresume/sriaranea/index.html" target="_blank" class="footer-last-links">A SriAranea Creation</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            
+
+
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Bootstrap JS and custom script -->
+
+    <script>
+        function openDoor() {
+            var door = document.querySelector('.door-container');
+            var homepage = document.getElementById('home');
+            var btnEnter = document.querySelector('.btn-enter');
+            var audio = new Audio('mixkit-futuristic-door-open-183.mp3');
+            let doorcontainer = document.querySelector('.door-container');
+
+            audio.play();
+
+            door.style.animation = 'revealHomepage 1s ease-in-out forwards';
+            setTimeout(function () {
+                door.style.display = 'none';
+                homepage.style.display = 'block';
+                btnEnter.style.display = 'none';
+                doorcontainer.classList.add('door-container-none');
+            }, 1000); // Adjust time according to animation duration
+        }
+    </script>
+    <script>
+        const counters = document.querySelectorAll('.counter');
+
+        // Options for the IntersectionObserver
+        const options = {
+            threshold: 0.5 // Trigger when at least 50% of the element is visible
+        };
+
+        // Callback function to handle intersection changes
+        function handleIntersect(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = entry.target;
+                    const targetNumber = parseFloat(target.getAttribute('data-target'));
+                    const incrementValue = targetNumber / 50; // Divide target value by number of steps
+                    let currentValue = 0;
+
+                    // Increment the counter value until reaching the target
+                    const counterInterval = setInterval(() => {
+                        currentValue += incrementValue;
+                        target.textContent = Math.floor(currentValue);
+                        if (currentValue >= targetNumber) {
+                            clearInterval(counterInterval);
+                        }
+                    }, 40); // Interval for smoother animation
+                }
+            });
+        }
+
+        // Create the IntersectionObserver instance
+        const observer = new IntersectionObserver(handleIntersect, options);
+
+        // Start observing each counter element
+        counters.forEach(counter => {
+            observer.observe(counter);
+        });
+    </script>
+    <script>
+        // JavaScript for Testimonials Slider
+        let testimonialIndex = 0;
+        const testimonials = document.querySelectorAll('.testimonial');
+
+        function showTestimonial(index) {
+            if (index < 0) {
+                testimonialIndex = testimonials.length - 1;
+            } else if (index >= testimonials.length) {
+                testimonialIndex = 0;
+            }
+            const offset = testimonialIndex * -100;
+            document.querySelector('.testimonials-slider').style.transform = `translateX(${offset}%)`;
+        }
+
+        function moveSlider(direction) {
+            testimonialIndex += direction;
+            showTestimonial(testimonialIndex);
+        }
+
+        // Auto slide testimonials every 5 seconds
+        setInterval(() => {
+            moveSlider(1);
+        }, 5000);
+    </script>
+    <script>
+        const eventTitles = [
+            "Event 1",
+            "Event 2",
+            "Event 3",
+            // Add more event titles here
+        ];
+
+        const eventTitleElement = document.querySelector('.event-title');
+
+        function typeWriter(text, i, cb) {
+            if (i < text.length) {
+                eventTitleElement.textContent += text.charAt(i);
+                i++;
+                setTimeout(function () {
+                    typeWriter(text, i, cb);
+                }, 100);
+            } else {
+                setTimeout(function () {
+                    eraseText(text, cb);
+                }, 1000);
+            }
+        }
+
+        function eraseText(text, cb) {
+            let len = text.length;
+            if (len > 0) {
+                eventTitleElement.textContent = text.substring(0, len - 1);
+                len--;
+                setTimeout(function () {
+                    eraseText(text.substring(0, len), cb);
+                }, 50);
+            } else {
+                cb();
+            }
+        }
+
+        function displayEventTitles() {
+            let currentIndex = 0;
+            function nextTitle() {
+                typeWriter(eventTitles[currentIndex], 0, function () {
+                    currentIndex = (currentIndex + 1) % eventTitles.length;
+                    setTimeout(nextTitle, 1000);
+                });
+            }
+            nextTitle();
+        }
+
+        displayEventTitles();
+
+    </script>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+
+</html>
